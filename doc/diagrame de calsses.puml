@@ -37,6 +37,7 @@ class Patron{
 
  }
  class Service{
+ -nomService
   -chiffreAffaireMensuelService
  }
  class Interimaire{

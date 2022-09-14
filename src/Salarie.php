@@ -45,6 +45,6 @@ abstract class Salarie{
 
     //tous les sous-classe devront implementer cette methode
     abstract public function presenter();
-    abstract public function getSalaireSalarie();
+    abstract public function calculerSalaire();
 
 }

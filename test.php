@@ -14,11 +14,11 @@ $chefDeService= new ChefsService("danny","grangeot", 22,"informatique");
 $chefDeService1= new ChefsService("dny","grangt", 22,"infortique");
 
 
-$entreprise->AddEmploye($employ1);
-$entreprise->AddEmploye($patron1);
-$entreprise->AddEmploye($chefDeService);
-$entreprise->AddEmploye($chefDeService1);
-$entreprise->AddEmploye(new Interimaire("danny","Grangeot",22,"InterimSocity"));
+$entreprise->addEmploye($employ1);
+$entreprise->addEmploye($patron1);
+$entreprise->addEmploye($chefDeService);
+$entreprise->addEmploye($chefDeService1);
+$entreprise->addEmploye(new Interimaire("danny","Grangeot",22,"InterimSocity"));
 
 dump($entreprise->getArrayOfChefsDeService());
 
