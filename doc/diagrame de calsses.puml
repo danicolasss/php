@@ -1,0 +1,54 @@
+@startuml
+'https://plantuml.com/class-diagram
+abstract class Salarie{
+ -nom
+ -prenom
+ -age
+
+ {abstract}+presenter()
+ {abstract}+calculerSalaire()
+}
+class Employe{
+-nbHeuresMensuelles
+-tauxHoraire
+-nbHeuresSup
+-tauxHoraireHeureSup
+}
+
+class Patron{
+ -pourcentageSurChiffreAffaire
+ -primeDirection
+ -voiture
+ +deplacer()
+ }
+
+ class ChefService{
+ -pourcentageSurChiffreAffaire
+ -salaireFixe
+ }
+
+ class Entreprise{
+ -chiffreAffaireMensuelEntreprise
+ -ville
+ -nom
+ +GetinfosAllSalarie()
+ +getMasseSalariale()
+ +getSalaireMoyen()
+
+ }
+ class Service{
+  -chiffreAffaireMensuelService
+ }
+ class Interimaire{
+ -SocieteInterim
+ }
+Patron       --> "1..1" Entreprise: gère
+Service      --> "1..1" Entreprise: gère
+ChefService  --> "1..1" Service: gere
+Patron      -up-|>     Salarie: Hérite de
+Entreprise  -up>"1..*" Salarie: Embauche
+ChefService -up-|>     Salarie: Hérite de
+Employe     -up-|>     Salarie: Hérite de
+Interimaire -up-|>     Salarie: Hérite de
+
+@enduml
